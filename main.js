@@ -1,6 +1,9 @@
 const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+require('update-electron-app')({
+  repo: 'vicramon/summit-electron',
+});
+
+const { app, BrowserWindow } = electron;
 
 const path = require("path");
 const fs = require("fs");
@@ -86,6 +89,7 @@ let initPath;
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.allowRendererProcessReuse = true;
+
 app.on("ready", () => {
   initPath = path.join(app.getPath("userData"), "init.json");
 
@@ -95,23 +99,28 @@ app.on("ready", () => {
 
   mainWindow = new BrowserWindow({
     width: 1024,
-    height: 768,
+    height: 880,
     icon: path.join(__dirname, "assets/icons/png/64x64.png"),
-    //titleBarStyle: 'hidden',
-    //frame: false,
+    titleBarStyle: 'hidden',
+    darkTheme: true,
+    trafficLightPosition: { x: 15, y: 14 },
+    backgroundColor: "#000",
+    // frame: false,
     backgroundColor: "#fff",
     webPreferences: {
       nodeIntegration: true,
       webviewTag: true,
       zoomFactor: 1.0,
       enableRemoteModule: true,
+      devTools: true,
     },
   });
 
-  mainWindow.loadURL("file://" + __dirname + "/index.html");
+  //mainWindow.loadURL("file://" + __dirname + "/index.html");
+  mainWindow.loadURL("http://localhost:3000");
 
   // Display Dev Tools
-  //mainWindow.openDevTools();
+  // mainWindow.openDevTools();
 
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
