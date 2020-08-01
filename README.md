@@ -24,41 +24,14 @@ This Electron webview application needs just these files:
 
 ## Usage
 
-To run this repository you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
 ```bash
 # Install dependencies
-$ npm install
+$ yarn
 # Run the app
-$ npm start
-```
-
-### Configuration
-
-You just need to change the `src` attribute of the `webview` in `index.html` file to display the url you want in your webview.
-
-### Developer tools
-
-You can show by default the developer tools by uncommenting in `main.js` file: `mainWindow.openDevTools();`.
-
-### Title bar
-
-You can hide the title bar of the app by setting `frame: false` or `titleBarStyle: 'hidden'` when creating the window in `main.js` in `mainWindow` variable.
-
-If you keep displaying the topbar using `titleBarStyle: 'hidden'` setting, you would have to adjust the topbar style.
-
-For example:
-
-```css
-#controls {
-  padding-top: 1.5em;
-}
+$ yarn start
 ```
 
 ### Window dimensions and responsive
-
-This webview is responsive and supports live dimensions change of the window.
-This webview remembers the window size you have before quitting the app to use it when you open it again.
 
 If you want to change the window dimensions at the first start, change `width` and `height` in `main.js` file in `mainWindow` variable when creating the window.
 
@@ -67,52 +40,6 @@ If you want to change the window dimensions at the first start, change `width` a
 This webview integrates an Electron menu. It will also make standard keyboard shortcuts, like copy and paste, work on MacOS.
 
 You can modify this menu in `main.js` file.
-
-### Topbar (home and print buttons)
-
-A topbar to show buttons:
-
-- "Home" button to come back to your app if your website has external links.
-- "Print" button to print the current url displayed by the webview.
-
-You can activate/deactivate this topbar (activate by default).
-
-#### Deactivation
-
-##### In `index.html`:
-
-- Comment:
-
-  ```html
-  <link rel="stylesheet" href="assets/css/topbar.css" />
-  ```
-
-  ```html
-  <div id="controls">...</div>
-  ```
-
-  ```html
-  <script src="assets/js/topbar.js"></script>
-  ```
-
-- Uncomment:
-  ```html
-  <link rel="stylesheet" href="assets/css/no-topbar.css" />
-  ```
-
-##### In `assets/js/webview.js`:
-
-- Comment:
-  ```js
-  // Topbar functions
-  homeButton();
-  printButton();
-  ```
-
-#### Activation
-
-- Do the opposite of what you did in the activation chapter above.
-- Don't forget to set the homepage of your app in the `data-home` attribute of `webview` in `index.html` file to make the "Home" button works.
 
 ## Application
 

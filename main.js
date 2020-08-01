@@ -102,6 +102,7 @@ app.on("ready", () => {
     height: 880,
     icon: path.join(__dirname, "assets/icons/png/64x64.png"),
     titleBarStyle: 'hidden',
+    title: "Summit",
     darkTheme: true,
     trafficLightPosition: { x: 15, y: 14 },
     backgroundColor: "#000",

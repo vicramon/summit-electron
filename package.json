@@ -1,8 +1,8 @@
 {
-  "name": "electron-webview",
-  "productName": "Electron webview",
-  "version": "1.0.4",
-  "description": "A simple Electron webview application",
+  "name": "summit",
+  "productName": "Summit",
+  "version": "0.0.1",
+  "description": "Communication multiplexer",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -16,8 +16,7 @@
     "Electron",
     "webview"
   ],
-  "author": "GitHub",
-  "license": "MIT",
+  "author": "Vic Ramon",
   "devDependencies": {
     "electron": "^9.0.0",
     "electron-installer-dmg": "^3.0.0"
