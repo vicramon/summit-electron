@@ -65,6 +65,14 @@ app.on("ready", () => {
     mainWindow = null;
   });
 
+  mainWindow.on('page-title-updated', (event, title, explicitSet) => {
+    if (title[title.length - 1] == "*" ) {
+      app.dock.setBadge("•")
+    } else {
+      app.dock.setBadge('')
+    }
+  })
+
   if (process.platform === 'darwin') {
     var forceQuit = false;
     app.on('before-quit', function() {
@@ -82,5 +90,5 @@ app.on("ready", () => {
 
 app.on('activate', () => mainWindow.show());
 
-app.dock.setBadge("•")
+// app.dock.setBadge("•")
 // app.setBadgeCount(3)
