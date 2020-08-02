@@ -1,5 +1,11 @@
 # Electron webview
 
+## Todo
+
+Remove packaging dependencies from the application.
+
+## Info
+
 This is a simple Electron application to create a webview.
 
 Features:
