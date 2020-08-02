@@ -1,7 +1,9 @@
 const electron = require("electron");
-require('update-electron-app')({
-  repo: 'vicramon/summit-electron',
-});
+
+// failing – requires signature
+// require('update-electron-app')({
+//   repo: 'vicramon/summit-electron',
+// });
 
 const { app, BrowserWindow } = electron;
 

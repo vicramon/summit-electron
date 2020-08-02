@@ -1,0 +1,1 @@
+yarn electron-installer-dmg ./release-builds/Summit-darwin-x64/Summit.app Summit --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns
