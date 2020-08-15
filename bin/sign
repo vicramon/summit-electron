@@ -1,0 +1,1 @@
+electron-osx-sign --no-gatekeeper-assess release-builds/Summit-darwin-x64/Summit.app
