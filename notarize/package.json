@@ -1,0 +1,13 @@
+{
+  "name": "summit-notarize",
+  "type": "module",
+  "version": "0.1",
+  "main": "index.js",
+  "license": "MIT",
+   "scripts": {
+    "start": "node --experimental-modules index.js"
+  },
+  "dependencies": {
+    "electron-notarize": "^1.0.0"
+  }
+}
