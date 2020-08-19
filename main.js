@@ -1,8 +1,8 @@
 const electron = require("electron");
 // failing – requires signature
-// require('update-electron-app')({
-//   repo: 'vicramon/summit-electron',
-// });
+require('update-electron-app')({
+  repo: 'vicramon/summit-electron',
+});
 
 const { app, BrowserWindow } = electron;
 
@@ -46,7 +46,7 @@ app.on("ready", () => {
   });
 
   //mainWindow.loadURL("file://" + __dirname + "/index.html");
-  mainWindow.loadURL("http://localhost:3000");
+  mainWindow.loadURL("https://summit-prod.herokuapp.com");
 
   // Display Dev Tools
   // mainWindow.openDevTools();
